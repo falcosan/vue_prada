@@ -1,0 +1,23 @@
+.review {
+    &__star {
+        &-list {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: min-content;
+            gap: 2px;
+            &--item {
+                overflow: hidden;
+                font-size: 12px;
+                white-space: nowrap;
+                color: #ccc;
+                &:before {
+                    content: "★";
+                }
+                &.selected {
+                    color: #ffd800;
+                }
+            }
+        }
+    }
+  }
+  
