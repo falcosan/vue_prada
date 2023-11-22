@@ -9,8 +9,12 @@
         />
       </ul>
     </div>
-    <span class="review__text" v-text="'Read reviews(02) | '" />
-    <span class="review__write" v-text="'Write review'" />
+    <div class="review__info">
+      <span class="review__info-dash" v-text="'  -  '" />
+      <span class="review__info-text" v-text="'Read reviews(02)'" />
+      <span class="review__info-bar" v-text="' | '" />
+      <span class="review__info-write" v-text="'Write review'" />
+    </div>
   </div>
 </template>
 

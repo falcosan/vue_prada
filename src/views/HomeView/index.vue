@@ -21,6 +21,9 @@ const data = computed(() => {
         source.attachments?.map(
           (attach) => attach?.attachmentAssetPath || '',
         ) ?? [],
+      sizes: source.sizeCodes,
+      buyable: String(source.buyable)?.toLowerCase() === 'true',
+      colors: source.otherVariants,
     }
   } else {
     return null

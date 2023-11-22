@@ -1,10 +1,9 @@
 .gallery {
     width: 100%;
-    max-width: 620px;
     &__highlight {
         position: relative;
         display: grid;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         &-modal {
             grid-row: 1/1;
             grid-column: 1/1;
@@ -43,14 +42,13 @@
         justify-content: center;
     }
     &__images {
-        display: flex;
-        margin: -10px;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 20px;
+        padding: 10px;
         @extend .swiper;
         &-item {
-            width: 132px;
-            height: 132px;
-            flex: none;
-            margin: 10px;
+            max-width: 132px;
             cursor: pointer;
             transition: box-shadow 0.2s ease;
             &:hover {

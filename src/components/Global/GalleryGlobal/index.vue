@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import { computed, reactive, toRefs } from 'vue'
+import { computed, reactive, toRefs, watch } from 'vue'
 import Modal from '@/components/Global/ModalGlobal'
 export default {
   name: 'GalleryGlobal',
@@ -97,6 +97,11 @@ export default {
         if (index !== -1) current.value = index
       }
     }
+    watch(
+      () => props.images,
+      () => (current.value = 0),
+      { deep: true },
+    )
     return {
       setterImages,
       changeCurrent,
